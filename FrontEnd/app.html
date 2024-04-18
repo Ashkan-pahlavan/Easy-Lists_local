@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" media="screen and (max-width: 500px)" href="styles1.css">
+    <title>My Lists</title>
+</head>
+<body>
+    <div class="container">
+        <span style="--c1: #33ffbb; --c2: #1affb3; --d: 0s;"></span>
+        <span style="--c1: #65dac6; --c2: #1affd9; --d: .25s;"></span>
+        <span style="--c1: #33ffff; --c2: #1affff; --d: .5s;"></span>
+        <span style="--c1: #33ddff; --c2: #1ad9ff; --d: .75s;"></span>
+        <span style="--c1: #33bbff; --c2: #1ab3ff; --d: 1s;"></span>
+        <span style="--c1: #3399ff; --c2: #1a8cff; --d: 1.25s;"></span>
+    </div>
+    <h1> My Lists</h1>
+    <main>
+        <div id="userName">
+            <input type="text" id="userIdInput" placeholder="UserID eingeben">
+        </div>
+        <div id="inp">
+            <input type="text" id="listNameInput" placeholder="List name eingeben">
+            <input type="text" id="taskInput" placeholder="Task eingeben">
+        </div>
+        <div id="ein">
+            <button onclick="aufgabeHinzufuegen()">add your Task</button>
+            <!-- <button onclick="aufgabenLaden()">Aufgaben laden</button> -->
+            <button onclick="showTableNames()">view my lists</button>
+        </div>
+    <ul id="tableList"></ul>
+
+    <ul id="todoListe"></ul>
+
+    <br><br><br>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>

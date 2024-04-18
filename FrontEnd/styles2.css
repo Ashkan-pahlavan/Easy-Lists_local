@@ -1,0 +1,282 @@
+/* Grundlegendes Reset */
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hintergrundvariablen */
+:root {
+  --bg: #3d656800;
+}
+
+/* Body-Styling */
+body {
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(82, 84, 102) 0%, rgba(32, 45, 58, 1) 81.3%);
+  min-height: 100vh;
+  height: auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #0fc3ccaf;
+  font-size: 60px;
+  text-shadow: 5px 5px 30px rgba(0, 0, 0, 1.5);
+  padding-bottom: 10px;
+
+}
+
+input {
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+
+ul {
+  display: block;
+  justify-content: center;
+}
+main{
+  display: block;
+  justify-content: center;
+}
+button {
+  margin: 0;
+  background-color: #0fc3cc;
+  color: #dedede;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+#userIdInput {
+  padding: 8px 0px;
+  text-align: center;
+  margin-bottom: 10px ;
+  background-color: rgba(91, 122, 110, 0.209);
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Deaktivierter Zustand */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+:disabled {
+  display: flex;
+  justify-content: center;
+  color: #00effc;
+  font-size: 1.8em;
+  
+  /* animation: blink 3s infinite; */
+}
+
+/* Liste für Aufgaben */
+
+#tableList{
+  margin: 5px 3px;
+  display: flex;
+  /* justify-content:center; */
+  flex-wrap: wrap;
+  align-content: flex-start;
+  /* width: 650px; */
+}
+
+#tableList li {
+  display: flex;
+  color: #8c8e90;
+  list-style: none;
+  margin: 0px 5px 10px 5px;
+  padding: 5px 7px;
+  background-color: rgba(91, 122, 110, 0.38);
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+    /* max-width: 800px; */
+}
+
+/* Hervorhebung bei Hover */
+#tableList li:hover {
+  background-color: rgba(91, 122, 110, 0.74);
+  color: #0fc3ccc9;
+  padding-left: 12px;
+  font-size: 1.3em;
+}
+#tableList button{
+  background-color: #00000000;
+  padding: 0px;
+  margin-left: 20px;
+}
+#tableList button:hover{
+  background-color: gold;
+}
+#todoListe{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#todoListe li{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #dedede;
+  padding: 10px;
+  border: 2px solid #dedede9a;
+  border-radius: 15px;
+  background-color: rgba(91, 122, 110, 0.246);
+
+  width: 650px;
+
+  /* margin-left: 365px; *************************** */
+
+    /* font-size: 1em; */
+}
+#todoListe label{
+  font-size: 1.4em;
+}
+#todoListe li:hover{
+  color: #0fc3ccc9;
+}
+
+button:hover{
+  background-color: gold;
+  color: #fff;
+  cursor: pointer;
+}
+
+#userName{
+  justify-content: center;
+  display: flex;
+}
+
+#inp{
+  margin: 0px 5px;
+  justify-content: center;
+  display: flex;
+}
+
+#ein{
+  justify-content: center;
+  display: flex;
+  padding: 5px;
+}
+
+#ein button{
+  margin: 7px 5px 2px 5px;
+}
+
+/* Hover-Styling für Aufgaben */
+li:hover {
+  cursor: pointer; /* Ändert den Mauszeiger, wenn über das <li> Element gefahren wird */
+}
+
+/* Styles für erledigte Aufgaben */
+/* .task-checked {
+  text-decoration: line-through;
+  color: red;
+} */
+
+.task-checked {
+  position: relative; /* Position relativ setzen, um Pseudo-Elemente relativ zum Elternelement zu positionieren */
+  color: rgba(125, 146, 139, 0.77); /* Textfarbe beibehalten */
+}
+
+/* .task-checked::first-line {
+  color: red;
+} */
+
+
+.task-checked::before {
+  content: ''; /* Leeres Inhaltspseudo-Element */
+  position: absolute; /* Position absolut setzen, um über dem Text zu liegen */
+  top: 50%; /* Oben auf 50% des Elternelements positionieren */
+  left: 0; /* Links auf den Anfang des Elternelements positionieren */
+  width: 100%; /* Volle Breite */
+  height: 2px; /* Höhe der Linie */
+  background-color: red; /* Farbe der durchgestrichenen Linie */
+  transform: translateY(-50%); /* Um die Linie um die Hälfte ihrer Höhe nach oben zu verschieben */
+  z-index: -1; /* Hinter den Text legen */
+}
+
+
+/* Checkbox-Styling */
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-custom {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  cursor: pointer;
+}
+
+.checkbox-custom:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #8c8e90; /* Ändern Sie die Border-Farbe nach Ihren Wünschen */
+  border-radius: 8px;
+  transition: background-color 0.8s ease;
+}
+
+.checkbox-custom:checked:before {
+  background-color: #c32517f9; /* Hintergrundfarbe, wenn die Checkbox ausgewählt ist */
+}
+
+/* .checkbox-custom:checked + .checkbox-label {
+  text-decoration: line-through;
+  color: red;
+} */
+
+.checkbox-label {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+/* Animationen */
+span {
+  margin: 30px;
+  padding: 10px;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--c1);
+  border-radius: 50%;
+  animation: anim 7s var(--d) ease-out infinite;
+
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+/* Container-Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+
+/* Keyframes-Animation */
+@keyframes anim {
+  0% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 0px var(--bg), 0 0 0px 0px #1affb300;
+  }
+  10% {
+    box-shadow: 0 0 8px 6px var(--c2), 0 0 12px 10px var(--bg), 0 0 12px 14px var(--c2);
+  }
+  100% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 40px var(--bg), 0 0 0px 40px #1affb300;
+  }
+}
+

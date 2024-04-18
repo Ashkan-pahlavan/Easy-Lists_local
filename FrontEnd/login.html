@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles_login.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 500px)" href="styles1.css"> -->
+    <title>Anmeldung</title>
+</head>
+<body>
+
+    <div class="imgcontainer">
+        <img src="login.svg" alt="Avatar" class="avatar"  height="500px" width="800px">
+    </div>
+    <div class="login">
+        <!-- <h1>Login</h1> -->
+        <form id="loginForm">
+            <!-- <h2>Registrieren</h2> -->
+            <h2>Anmelden</h2>
+            <div class="container">
+                <!-- <label for="uname" style="color: rgb(178, 239, 239);"><b>Neuer Benutzername</b></label> -->
+                <input type="text" placeholder=" Benutzernamen eingeben" name="uname" id="uname" required><br>
+                <!-- <label for="psw" style="color: rgb(178, 239, 239);"><b>Neuer Passwort</b></label> -->
+                <input type="password" placeholder=" Passwort eingeben" name="psw" id="psw" required>
+                <button type="submit" id="loginButton">Anmelden</button>
+                <!-- <button type="submit" id="loginButton">Registrieren</button> -->
+            </div>
+        </form>
+        <br>
+        <!-- <h2>Anmelden</h2> -->
+        <h2>Registrieren</h2>
+        <form id="registerForm">
+            <div class="container">
+                <!-- <label for="newuname" style="color: rgb(178, 239, 239);"><b> Benutzername</b></label> -->
+                <input type="text" placeholder="Neuen Benutzername eingeben" name="newuname" id="newuname" required>
+                <!-- <label for="newpsw" style="color: rgb(178, 239, 239);"><b> Passwort</b></label> -->
+                <input type="password" placeholder="Neuen Passwort eingeben" name="newpsw" id="newpsw" required>
+                <button type="submit" id="registerButton">Registrieren</button>
+                <!-- <button type="submit" id="registerButton">Anmelden</button> -->
+            </div>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+
+/* body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } */
+  body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: block; /* Standardmäßig wird display auf block gesetzt */
+  }
+  
+  @media screen and (min-width: 1000px) {
+    body {
+      display: flex; /* Wenn die Bildschirmbreite größer oder gleich 500px ist, wird display auf flex gesetzt */
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  .imgcontainer{
+    margin: 150px 100px 200px ;
+  }
+  .container {
+    text-align: center;
+  }
+  
+  .login {
+    font-size: .8em;
+    box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, .5);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, .1);
+    padding: 25px 35px;
+    color: white;
+    margin: 20px 130px;
+    /* background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 80%; */
+  }
+  
+  .login h1 {
+    color: #0fc3cc;
+    font-size: 6em;
+    text-shadow: 6px -3px 6px #bfbfbf;
+    padding: 1px;
+    margin: 2px;
+  }
+  h2{
+    color: #0fc3cc;
+  }
+  .login img.avatar {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"] {
+    width: calc(100% - 40px);
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  
+  .login button {
+    background-color: #0fc3cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    width: calc(100% - 40px);
+  }
+  
+  .login button:hover {
+    background-color: gold;
+  }

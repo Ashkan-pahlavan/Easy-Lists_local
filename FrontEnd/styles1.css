@@ -1,0 +1,193 @@
+/* Grundlegendes Reset */
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hintergrundvariablen */
+:root {
+  --bg: #3d656800;
+}
+
+/* Body-Styling */
+body {
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgb(82, 84, 102) 0%, rgba(32, 45, 58, 1) 81.3%);
+  min-height: 100vh;
+  height: auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #0fc3ccaf;
+  font-size: 40px; /* Kleinere Schriftgröße für Handy */
+  text-shadow: 5px 5px 30px rgba(0, 0, 0, 1.5);
+  padding-bottom: 10px;
+}
+
+input {
+  padding: 8px; /* Kleinere Padding für Input auf Handy */
+  margin: 5px; /* Kleinere Margin für Input auf Handy */
+  border-radius: 8px;
+  border: none;
+}
+
+ul {
+  display: block;
+  justify-content: center;
+}
+
+main {
+  display: block;
+  justify-content: center;
+}
+
+button {
+  margin: 0;
+  background-color: #0fc3cc;
+  color: #dedede;
+  padding: 8px; /* Kleinere Padding für Button auf Handy */
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9em; /* Kleinere Schriftgröße für Button auf Handy */
+}
+
+#userIdInput {
+  padding: 6px 0px;
+  text-align: center;
+  margin-bottom: 5px;
+  background-color: rgba(91, 122, 110, 0.209);
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Deaktivierter Zustand */
+:disabled {
+  display: flex;
+  justify-content: center;
+  color: #00effc;
+  font-size: 1.4em; /* Kleinere Schriftgröße für deaktivierten Zustand auf Handy */
+}
+
+/* Liste für Aufgaben */
+#tableList {
+  /* margin: 15px;
+  display: flex; */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#tableList li {
+  display: flex;
+  color: #8c8e90;
+  list-style: none;
+  margin: 0px 5px 5px 2px;
+  padding: 10px 5px;
+  background-color: rgba(91, 122, 110, 0.38);
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hervorhebung bei Hover */
+#tableList li:hover {
+  background-color: rgba(91, 122, 110, 0.74);
+  color: #0fc3ccc9;
+  padding-left: 12px;
+  font-size: 1.1em; /* Kleinere Schriftgröße für Hover-Effekt auf Handy */
+}
+
+#tableList button {
+  background-color: #00000000;
+  padding: 0px;
+  margin-left: 20px;
+}
+
+#tableList button:hover {
+  background-color: gold;
+}
+
+#todoListe {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+#todoListe li {
+  font-size: 0.9em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: #dedede;
+  padding: 10px;
+  border: 2px solid #dedede;
+  border-radius: 15px;
+  background-color: rgba(91, 122, 110, 0.246);
+  width: 100%; /* Vollbreite für ToDo-Liste auf Handy */
+}
+#todoListe label{
+  font-size: 1.2em;
+}
+#todoListe li:hover {
+  color: #0fc3ccc9;
+}
+
+button:hover {
+  background-color: gold;
+  color: #fff;
+}
+
+#userName {
+  justify-content: center;
+  display: flex;
+}
+
+#inp {
+  justify-content: center;
+  display: flex;
+}
+
+#ein {
+  justify-content: center;
+  display: flex;
+  margin: 3px;
+  padding: 3px;
+}
+
+#ein button {
+  margin: 7px 5px 2px 5px;
+}
+
+/* Animationen */
+span {
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: var(--c1);
+  border-radius: 50%;
+  animation: anim 7s var(--d) ease-out infinite;
+}
+
+/* Container-Styling */
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* Keyframes-Animation */
+@keyframes anim {
+  0% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 0px var(--bg), 0 0 0px 0px #1affb300;
+  }
+  10% {
+    box-shadow: 0 0 8px 6px var(--c2), 0 0 12px 10px var(--bg), 0 0 12px 14px var(--c2);
+  }
+  100% {
+    box-shadow: 0 0 8px 6px #1affb300, 0 0 0px 40px var(--bg), 0 0 0px 40px #1affb300;
+  }
+}
